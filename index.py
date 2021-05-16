@@ -8,11 +8,8 @@ from app import server
 import plotly.graph_objects as go
 
 # Connect to your app pages
-from apps import historia,dashboard,detalle,analisis
-#from scikit_image import io
+from apps import historia,me,detalle,analisis
 
-# You can give path to the
-# image as first argument
 app.layout = html.Div([
 
 
@@ -21,14 +18,14 @@ app.layout = html.Div([
             children=[
                 # collapse,
                 #toast,
-                dbc.NavLink("Dash", href="/apps/dashboard", id="page-1-link",style={"font-size": "1.35em"}),
+                dbc.NavLink("Social Media", href="/apps/me", id="page-1-link",style={"font-size": "1.35em"}),
                 dbc.NavLink("Detalle", href="/apps/detalle", id="page-2-link",style={"font-size": "1.35em"}),
                 dbc.NavLink("Histórico", href="/apps/historia", id="page-3-link",style={"font-size": "1.35em"}),
                 dbc.NavLink("Análisis", href="/apps/analisis", id="page-4-link",style={"font-size": "1.35em"}),
             ],
             # fill=True,
-            brand="Dash App - Intradevco",
-            color="success",
+            brand="Dash Me - Camilo Poma",
+            color="primary",
             dark=True,
         ),
     ], #className="row"
@@ -40,8 +37,9 @@ app.layout = html.Div([
         #html.Div(
          #   html.Img(src=app.get_asset_url('itdc.jpg')))
 
-        ]
-    ,style={"background":"#F5F5F5","padding":"0.7%"}),
+        ],
+    # style={"background":"#F5F5F5","padding":"0.7%"}
+    ),
 
 
 ])
@@ -49,18 +47,18 @@ app.layout = html.Div([
 
 portada = html.Div(
     [
-        html.H2 ('Bienvenido al Dash App de Intradevco Bolivia',style={"textAlign": "center"}),
+        html.H2 ('Welcome to Camilo Poma Dash App',style={"textAlign": "center"}),
         html.Br(),
         dbc.Row([
           dbc.Col(html.Img(src=app.get_asset_url('itdc.jpg'),style={'height':'100%', 'width':'98%'}),xs=12, sm=12, md=11, lg=6, xl=6),
-          dbc.Col([html.H3('Contenido',style={"textAlign": "center"}),
+          dbc.Col([html.H3('Contents',style={"textAlign": "center"}),
                         dcc.Markdown(
                                 '''
                                 
                                 * ***Dash:*** Vista Resumen
                                 * ***Detalle:*** Se muestran filtros adicionales
-                                * ***Histórico:*** Evolución de la ventas mensuales
-                                * ***Análisis:*** Medición de adquisición y retención
+                                * ***Blog:*** Evolución de la ventas mensuales
+                                * ***Some plotly graphs:*** medición de adquisición y retención
                                 '''
                             ),
                    html.H3('Indicadores', style={"textAlign": "center"}),
@@ -71,9 +69,6 @@ portada = html.Div(
                        * ***Mix de Categoría:*** Número promedio de categorías que compran los clientes
                        * ***Mix de Familia:*** Número promedio de familia que compran los clientes
                        * ***Profundidad:*** Número promedio de sku's que compran los clientes
-                       * ***Ticket Promedio:*** Volumen o venta promedio que compran los clientes
-                       * ***Frecuencia de Compra:*** Cantidad de veces que compran en promedio los clientes
-                       * ***Pordentaje de Recompra:*** Porcentaje de clientes que compran más de una vez
                        '''
                    )
 
@@ -86,7 +81,12 @@ portada = html.Div(
         html.Br(),
         html.Br(),
         html.H5('Cualquier comentario o consulta contactarse con el área de Inteligencia Comercial',style={"textAlign": "center"}),
-        html.H5('ic@alicorp.com.pe',style={"textAlign": "center"})
+        html.H5('cpomaz@uni.pe',style={"textAlign": "center"}),
+        html.Br(),
+        html.H5('https://github.com/CamiloPZ',style={"textAlign": "center"}),
+        html.Br(),
+        html.H5('https://www.instagram.com/camilo_poma/',style={"textAlign": "center"}),
+        html.Br(),
 
 
 
@@ -103,9 +103,9 @@ portada = html.Div(
 def display_page(pathname):
     if pathname == '/':
          return portada
-     #   return dashboard.layout
-    if pathname == '/apps/dashboard':
-        return dashboard.layout
+     #   return me.layout
+    if pathname == '/apps/me':
+        return me.layout
     if pathname == '/apps/detalle':
         return detalle.layout
     if pathname == '/apps/historia':
