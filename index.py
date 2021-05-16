@@ -2,13 +2,12 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
-import plotly.express as px
 from app import app
 from app import server
 import plotly.graph_objects as go
 
-# Connect to your app pages
-from apps import historia,me,detalle,analisis
+
+from apps import test,me,publications,blog
 
 app.layout = html.Div([
 
@@ -18,15 +17,17 @@ app.layout = html.Div([
             children=[
                 # collapse,
                 #toast,
-                dbc.NavLink("Social Media", href="/apps/me", id="page-1-link",style={"font-size": "1.35em"}),
-                dbc.NavLink("Detalle", href="/apps/detalle", id="page-2-link",style={"font-size": "1.35em"}),
-                dbc.NavLink("Histórico", href="/apps/historia", id="page-3-link",style={"font-size": "1.35em"}),
-                dbc.NavLink("Análisis", href="/apps/analisis", id="page-4-link",style={"font-size": "1.35em"}),
+                dbc.NavLink("Social Media", href="/apps/me", id="page-1-link",),
+                dbc.NavLink("Publications", href="/apps/publications", id="page-2-link",),
+                dbc.NavLink("Some tests", href="/apps/test", id="page-3-link",),
+                dbc.NavLink("Blog", href="/apps/blog", id="page-4-link",),
             ],
             # fill=True,
             brand="Dash Me - Camilo Poma",
+            brand_style ={"font-size": "1.55em",'font-family':'Comic Sans MS'},
             color="primary",
             dark=True,
+            style={"font-size": "1.55em",'font-family':'Comic Sans MS'}
         ),
     ], #className="row"
     ),
@@ -55,8 +56,8 @@ portada = html.Div(
                         dcc.Markdown(
                                 '''
                                 
-                                * ***Dash:*** Vista Resumen
-                                * ***Detalle:*** Se muestran filtros adicionales
+                                * ***Social Media:*** All my contact information
+                                * ***publications:*** Se muestran filtros adicionales
                                 * ***Blog:*** Evolución de la ventas mensuales
                                 * ***Some plotly graphs:*** medición de adquisición y retención
                                 '''
@@ -106,14 +107,14 @@ def display_page(pathname):
      #   return me.layout
     if pathname == '/apps/me':
         return me.layout
-    if pathname == '/apps/detalle':
-        return detalle.layout
-    if pathname == '/apps/historia':
-        return historia.layout
+    if pathname == '/apps/publications':
+        return publications.layout
+    if pathname == '/apps/test':
+        return test.layout
     # if pathname == '/apps/evolutivo':
     #     return evolutivo.layout
-    if pathname == '/apps/analisis':
-        return analisis.layout
+    if pathname == '/apps/blog':
+        return blog.layout
     else:
         return portada
 
