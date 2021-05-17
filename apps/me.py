@@ -80,7 +80,8 @@ layout = html.Div([
     #     | col 3 is | right-aligned |   1   |
 
     #     '''),
-    dbc.Row([
+    dbc.CardDeck([
+    # dbc.Row([
         dbc.Col([
             dbc.Card([
                 dbc.CardHeader(Lottie(options=options, width="52%", height="67%", url=url_ytb)),
@@ -135,7 +136,9 @@ layout = html.Div([
                 ], style={'textAlign': 'center','font-family':'Comic Sans MS'})
             ]),
         ],xs=6 ,md =4,sm=6 ,lg=2,xl = 2),
-    ],justify="center",),
+    # ],
+    # justify="center",),
+    ]),
     html.H3(''),
     dcc.Graph(id='figure1',figure=fig),
     dbc.Row([
