@@ -47,7 +47,7 @@ app.layout = html.Div([
 
 
 portada = html.Div(
-    [
+    [   html.Br(),
         html.H2 ('Welcome to Camilo Poma Dash App',style={"textAlign": "center"}),
         html.Br(),
         dbc.Row([

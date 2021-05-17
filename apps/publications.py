@@ -51,27 +51,42 @@ card4 = dtc.Card(
             dark=True
         )
 
+
+cards = dbc.CardDeck([
+    card1,
+    card2,
+    card3,
+    card4,
+
+
+],
+
+
+
+)
+
+
+
+
+
 layout = html.Div([
     html.Br(),
     html.H2('Some of my publications',style={"textAlign":"center","font-weight":"bold","font-family":"Comic Sans MS"}),
     html.Br(),
     dbc.Row([
-        dbc.Col([
-            card1,       
-        
-        ]),
-        dbc.Col([
-            card2,        
-        
-        ]),
-        dbc.Col([
-            card3,        
-        
-        ]),
-         dbc.Col([
-            card4,        
-        
-        ]),
+        cards
+    
+    ],
+    justify="center"),
+    html.Br(),
+    dbc.Row([
+        cards
+    
+    ],
+    justify="center"),
+    html.Br(),
+    dbc.Row([
+        cards
     
     ],
     justify="center")
