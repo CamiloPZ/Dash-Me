@@ -21,7 +21,7 @@ DATA_PATH = PATH.joinpath("../datasets").resolve()
 
 
 df = px.data.gapminder()
-print(df.year.unique())
+
 df_2020 = df.query("year==2007")
 
 

@@ -48,11 +48,11 @@ app.layout = html.Div([
 
 portada = html.Div(
     [   html.Br(),
-        html.H2 ('Welcome to Camilo Poma Dash App',style={"textAlign": "center"}),
+        html.H2 ('Welcome to Camilo Dash App',style={"textAlign": "center","font-family":"Comic Sans MS"}),
         html.Br(),
         dbc.Row([
-          dbc.Col(html.Img(src=app.get_asset_url('itdc.jpg'),style={'height':'100%', 'width':'98%'}),xs=12, sm=12, md=11, lg=6, xl=6),
-          dbc.Col([html.H3('Contents',style={"textAlign": "center"}),
+          dbc.Col(html.Img(src=app.get_asset_url('itdc.jpg'),style={'height':'60%', 'width':'58%'}),xs=12, sm=12, md=11, lg=6, xl=6),
+          dbc.Col([html.H3('Contents',style={"textAlign": "center","font-family":"Comic Sans MS"}),
                         dcc.Markdown(
                                 '''
                                 
@@ -62,7 +62,7 @@ portada = html.Div(
                                 * ***Some plotly graphs:*** medición de adquisición y retención
                                 '''
                             ),
-                   html.H3('Indicadores', style={"textAlign": "center"}),
+                   html.H3('Notions', style={"textAlign": "center","font-family":"Comic Sans MS"}),
                    dcc.Markdown(
                        '''
 
@@ -75,18 +75,19 @@ portada = html.Div(
 
 
                    ],xs=12, sm=12, md=11, lg=6, xl=6),
-        ]
+        ],
+        # justify="center",no_gutters=True,
 
         ),
 
-        html.Br(),
-        html.Br(),
-        html.H5('Cualquier comentario o consulta contactarse con el área de Inteligencia Comercial',style={"textAlign": "center"}),
+        # html.Br(),
+        # html.Br(),
+        html.H5('Cualquier comentario o consulta contactarse con el área de Inteligencia Comercial',style={"textAlign": "center","font-family":"Comic Sans MS"}),
         html.H5('cpomaz@uni.pe',style={"textAlign": "center"}),
         html.Br(),
-        html.H5('https://github.com/CamiloPZ',style={"textAlign": "center"}),
+        html.H5('https://github.com/CamiloPZ',style={"textAlign": "center","font-family":"Comic Sans MS"}),
         html.Br(),
-        html.H5('https://www.instagram.com/camilo_poma/',style={"textAlign": "center"}),
+        html.H5('https://www.instagram.com/camilo_poma/',style={"textAlign": "center","font-family":"Comic Sans MS"}),
         html.Br(),
 
 
