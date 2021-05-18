@@ -82,8 +82,8 @@ portada = html.Div(
 
         # html.Br(),
         # html.Br(),
-        html.H5('Cualquier comentario o consulta contactarse con el área de Inteligencia Comercial',style={"textAlign": "center","font-family":"Comic Sans MS"}),
-        html.H5('cpomaz@uni.pe',style={"textAlign": "center"}),
+        
+        html.H5('cpomaz@uni.pe',style={"textAlign": "center","font-family":"Comic Sans MS"}),
         html.Br(),
         html.H5('https://github.com/CamiloPZ',style={"textAlign": "center","font-family":"Comic Sans MS"}),
         html.Br(),
