@@ -28,19 +28,32 @@ layout = html.Div([
         Inline code snippet: `False`
 
         Block code snippet:
-        ```py
+        ```ruby
         import dash
 
         external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
         app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+        for i in range(8):
+            print(i)
+
+
         ```
 
             >
             > Block quotes are used to highlight text.
             >
 
+        That is so funny! :joy:
+
         '''),
+
+    html.Code(children=
+                '''def funcion(a):
+                    return a+1
+                ''', className="python"),
+
+    # html.Code[chil),
 
 
 ])
