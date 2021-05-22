@@ -6,6 +6,9 @@ app = dash.Dash(
     suppress_callback_exceptions=True,
     title="Dash Me",
     external_stylesheets=[dbc.themes.DARKLY],
+    external_scripts=[
+    'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+    ],
     meta_tags=[
         {
             "name": "viewport",

@@ -90,7 +90,7 @@ layout = html.Div([
                     html.H2(id='content-connections', children="000")
                 ], style={'textAlign':'center','font-family':'Comic Sans MS'})
             ]),
-        ],xs=6 ,md =4,sm=6 ,lg=2,xl = 2),
+        ],xs=12 ,md =4,sm=6 ,lg=2,xl = 2),
         dbc.Col([
             dbc.Card([
                 dbc.CardHeader(Lottie(options=options, width="52%", height="32%", url=url_linke)),
@@ -99,7 +99,7 @@ layout = html.Div([
                     html.H2(id='content-companies', children="000")
                 ], style={'textAlign':'center','font-family':'Comic Sans MS'})
             ]),
-        ],xs=6 ,md =4,sm=6 ,lg=2,xl = 2),
+        ],xs=12 ,md =4,sm=6 ,lg=2,xl = 2),
         dbc.Col([
             dbc.Card([
                 dbc.CardHeader(Lottie(options=options, width="53%", height="25%", url=url_mail)),
@@ -108,7 +108,7 @@ layout = html.Div([
                     html.H2(id='content-msg-in', children="000")
                 ], style={'textAlign':'center','font-family':'Comic Sans MS'})
             ]),
-        ],xs=6 ,md =4,sm=6 ,lg=2,xl = 2),
+        ],xs=12 ,md =4,sm=6 ,lg=2,xl = 2),
         dbc.Col([
             dbc.Card([
                 dbc.CardHeader(Lottie(options=options, width="53%", height="53%", url=url_git)),
@@ -126,7 +126,7 @@ layout = html.Div([
                     html.H2(id='content-reactions', children="000")
                 ], style={'textAlign': 'center','font-family':'Comic Sans MS'})
             ]),
-        ],xs=6 ,md =4,sm=6 ,lg=2,xl = 2),
+        ],xs=12 ,md =4,sm=6 ,lg=2,xl = 2),
         dbc.Col([
             dbc.Card([
                 dbc.CardHeader(Lottie(options=options, width="55%", height="85%", url=url_inst)),
@@ -135,7 +135,7 @@ layout = html.Div([
                     html.H2(id='content-reactions2', children="000")
                 ], style={'textAlign': 'center','font-family':'Comic Sans MS'})
             ]),
-        ],xs=6 ,md =4,sm=6 ,lg=2,xl = 2),
+        ],xs=12 ,md =4,sm=6 ,lg=2,xl = 2),
     # ],
     # justify="center",),
     ]),

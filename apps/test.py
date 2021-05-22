@@ -7,8 +7,13 @@ import dash_html_components as html
 
 from app import app
 
+
 layout = html.Div([
     html.Br(),
+    html.Div(id='static',children='$$y = \\begin{cases} 0 & x < 0 \\\\ x & x \ge 0 \\end{cases}$$'),
+    html.Div(id='static',children='$$f(x) = \\frac{1}{2}(1+ \\theta x) ; -1<x<1, \\theta \in <-1,1>$$'),
+    html.Div(id='static',children='$$F(x) = \\begin{array}{cc} \\{ &  \\begin{array}{cc} 0 & x\\leq -1 \\\ \\frac{1}{2} (\\theta \\frac{x^2}{2} + x - \\frac{\\theta}{2} + 1) & -1\\leq x\\leq 1 \\\   1 & 1\\leq x    \\end{array}\\end{array}$$'),
+    html.Div(id='static',children='$$F(x) = \\begin{cases} 0 &  x\leq -1  \\\\ \\frac{1}{2} (\\theta \\frac{x^2}{2} + x - \\frac{\\theta}{2} + 1) & -1\leq x\leq 1  \\\\ 1 &  1\leq x \\end{cases}$$'),
     dbc.Row(
         [
             dbc.Col(
@@ -18,9 +23,24 @@ layout = html.Div([
         ],
         justify="center"
     ),
-    dcc.Markdown(
-        '''
-        # Hola
-        '''
-    )
+    dcc.Markdown('''
+
+        Inline code snippet: `False`
+
+        Block code snippet:
+        ```py
+        import dash
+
+        external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+        app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+        ```
+
+            >
+            > Block quotes are used to highlight text.
+            >
+
+        '''),
+
+
 ])
