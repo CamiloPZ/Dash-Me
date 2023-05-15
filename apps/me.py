@@ -80,7 +80,7 @@ layout = html.Div([
     #     | col 3 is | right-aligned |   1   |
 
     #     '''),
-    dbc.CardDeck([
+    dbc.Card([
     # dbc.Row([
         dbc.Col([
             dbc.Card([
